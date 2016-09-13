@@ -39,8 +39,8 @@
 			<!-- START PAGE -->
 			<br>
 
-			<h1 class="heading-medium">Are there other occupants over 18 living under the same tenancy agreement who may be subjected to a disqualification notice?</h1>
-<p>For example, tenant may be living with a co-tenant who has British nationality; therefore you will not need to list the co-tenant</p>
+			<h1 class="heading-medium">Are there other tenants or occupiers under the same tenancy agreement who may be disqualified from renting (not allowed to be in the UK)</h1>
+<p>If there are other tenants or occupants over the age of 18 living with the tenant, they must be listed even if their names are not on the tenancy agreement. Children under the age of 18 do not need to be listed.</p>
 			<form name="test-form">
 
 				<!--name of company  -->
@@ -54,17 +54,12 @@
 					<div class="optional-section-radio-group form-group" data-toggle-value="yes">
 						<br>
 						<label class="form-label" for="vac-city">
-							How many? (leave blank if unsure)
+							How many other people? (leave blank if unsure)
 						</label>
 						<textarea name="Text333a" cols="340" rows="1" style="width:100px; height:30px;" id="Text333a"></textarea>
 						<br><br>
 
-						<details>
-							<summary><span class="summary">Help with tenancy agreements</span></summary>
-							<div class="panel panel-border-narrow">
-								<p>If there are other tenants or occupants over the age of 18 living with the tenant, they must be listed even if their names are not on the tenancy agreement. Children under the age of 18 do not need to be listed.</p>
-							</div>
-						</details>
+
 					</div>
 
 					<!--2  -->
@@ -102,7 +97,7 @@ $(function () {
 			this.href = 'n-others-same-tenancy.html';
 			break;
 			default:
-			this.href = 'n-tenancy-others.html';
+			this.href = 'n-landlord-agent.html';
 			break;
 		}
 		return true;
