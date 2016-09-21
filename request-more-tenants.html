@@ -34,77 +34,56 @@
 		<div data-includefile="banner-alpha"></div>
 
 
- <div class="column-two-thirds">
+		<div class="column-two-thirds">
+
+			<!-- START PAGE -->
+			<br>
+
+			<h1 class="heading-medium">Are there more members under the same tenancy?</h1>
+
+			<form name="test-form">
+
+				<div class="form-group">
+					<label class="block-label selectable" for="radio-1">
+						<input class="selectable" id="radio-1" type="radio" name="radio-order-how" value="yes">
+						Yes
+					</label>
+
+					<label class="block-label selectable" for="radio-2">
+						<input id="radio-2" type="radio" name="radio-order-how" value="no">
+						No
+					</label>
+				</div>
+
+			</form>
+
+<br>
+<a href="#"><input class="button" type="submit" value="Continue"></a>
+
+		</div> <!-- column-two-thirds -->
 
 
-
-	 <!-- START PAGE -->
-
-<h1 class="heading-xlarge">Request help to evict tenants/occupiers due to immigration status</h1>
-
-<p>Use this service if you suspect the tenants/occupiers living in the residential property that you own, manage or represent are not legally allowed to stay due to their immigration status.</p>
-
-<div class="notice">
-  <i class="fa fa-exclamation-circle fa-lg">
-    <span class="visuallyhidden">Warning</span>
-  </i>
-  <strong class="bold-small">
-    You can be fined up to £3,000 or face criminal convictions if you knowingly allow illegal tenants/occupiers to live on your property
-  </strong>
-</div>
+<!-- STOP DELETING! -->
 
 
-<h2 class="heading-medium">This service will allow you to:</h2>
-<ul class="list-bullet">
-	<li>report the tenants/occupiers have left the property as a result of a Notice of Letting to a Disqualified Person (NLDP)</li>
-	<li>check whether the tenants/occupiers are still disqualified from renting </li>
-	<li>request an NLDP so that you can give tenants/occupiers notice to leave the property due to their immigration status</li>
-
-
-</ul>
-
-<h2 class="heading-medium">Who can use this service</h2>
-<ul class="list-bullet">
-	<li>landlords </li>
-	<li>agents acting on behalf of the landlords</li>
-</ul>
-
-
-
-<h2 class="heading-medium">Before you start</h2>
-<p>You will need the following:</p>
-<ul class="list-bullet">
-	<li>date of issue for the NLDP, if you have one</li>
-	<li>property address</li>
-	<li>tenants'/occupiers' details including name, date of birth (if known) and nationality (if known) </li>
-	<li>other tenants'/occupiers' details residing under the same tenancy agreement who are over the age of 18</li>
-	<li>tenancy start date</li>
-	<li>landlord or agent details</li>
-	<li>Home Office reference number (if applicable and known)</li>
-
-</ul>
-
-
-
-
-
-<a class="button button-start" href="task.html" role="button">Start now</a>
-
-
-
-</div> <!-- column-two-thirds -->
-
-
-
-
-
-
-
-
-		 <!-- STOP DELETING! -->
-
-
-	</main>
-	<footer data-includefile="footer"></footer>
+</main>
+<footer data-includefile="footer"></footer>
+<script type="text/javascript">
+$(function () {
+	$('a').click(function (e) {
+		var value = $('input[name=radio-group]:checked').val();
+		// var value = $('input#input-text-id').val();
+		switch(value) {
+			case 'yes':
+			this.href = 'request-others-same-tenancy.html';
+			break;
+			default:
+			this.href = 'request-landlord-agent.html';
+			break;
+		}
+		return true;
+	});
+});
+</script>
 </body>
 </html>

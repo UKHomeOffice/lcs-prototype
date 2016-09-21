@@ -36,54 +36,39 @@
 
 		<div class="column-two-thirds">
 
-			<!-- START PAGE -->
-			<br>
+			<!-- DELETE FROM HERE -->
 
-			<h1 class="heading-medium">Are there more members under the same tenancy?</h1>
+			<form name="test-form" class="form">
+				<br>
+				<a href="applicant.html">< Back</a>
+			<h1 class="heading-medium">What's the tenant's name that you'd like to check?</h1>
 
-			<form name="test-form">
+			<!--Full name -->
 
-				<div class="form-group">
-					<label class="block-label selectable" for="radio-1">
-						<input class="selectable" id="radio-1" type="radio" name="radio-order-how" value="yes" data-storage="Car">
-						Yes
-					</label>
+			<div class="form-group">
+				<label class="form-label" for="full-name">Full name</label>
+				<input type="text" class="form-control" id="full-name5" name="full-name5" />
 
-					<label class="block-label selectable" for="radio-2">
-						<input id="radio-2" type="radio" name="radio-order-how" value="no" data-storage="Unicycle">
-						No
-					</label>
-				</div>
+			</div>
+
+
+
+
+			<div class="form-group">
+				<a class="button" href="check-tenant-details.html">Continue</a>
+
+			</div>
+		</form>
+
 
 			</form>
 
-<br>
-<a href="#"><input class="button" type="submit" value="Continue"></a>
-
 		</div> <!-- column-two-thirds -->
-
 
 <!-- STOP DELETING! -->
 
 
 </main>
 <footer data-includefile="footer"></footer>
-<script type="text/javascript">
-$(function () {
-	$('a').click(function (e) {
-		var value = $('input[name=radio-group]:checked').val();
-		// var value = $('input#input-text-id').val();
-		switch(value) {
-			case 'yes':
-			this.href = 'n-others-same-tenancy.html';
-			break;
-			default:
-			this.href = 'n-tenancy-others.html';
-			break;
-		}
-		return true;
-	});
-});
-</script>
 </body>
 </html>
