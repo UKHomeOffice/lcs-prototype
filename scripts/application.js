@@ -33,6 +33,8 @@ $( document ).ready(function() {
     }
   });
 
+  $('[data-toggle-value]').hide();
+
   $('[data-button-page]').change(function(){
     var buttonid = $(this).attr("data-button-id");
     var url = $(this).attr("data-button-page");
