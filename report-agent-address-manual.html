@@ -16,7 +16,6 @@
 	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
-	<!-- <link href="stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" /> -->
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/form.storage.js"></script>
@@ -24,8 +23,6 @@
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 
@@ -33,53 +30,39 @@
 	<main id="content" role="main">
 		<div data-includefile="banner-alpha"></div>
 
+<!-- DELETE FROM HERE -->
 
-		<div class="column-two-thirds">
-
-			<!-- DELETE FROM HERE -->
-
-			<form name="test-form" class="form">
-				<br>
-				<a href="applicant.html">< Back</a>
-			<h1 class="heading-medium">What are your contact details?</h1>
-
-
-				<!--Email  -->
-
-				<div class="form-group">
-					<label class="form-label" for="full-name">Email</label>
-					<input type="text" class="form-control" id="full-name6" name="full-name6" />
-				</div>
-
-				<!--Phone  -->
-
-				<div class="form-group">
-					<label class="form-label" for="full-name">Phone number</label>
-					<input type="text" class="form-control" id="full-name6" name="full-name6" />
-				</div>
+<form name="test-form" class="form">
+	<br>
+		<a href="contact-select.html">< Back</a>
+		<h1 class="heading-medium">What's your contact address?</h1>
 
 
 
+	<p>Postcode</p>
+	<p class="bold">SW2 5RL <span class="indent"><a href="report-agent-address.html">Change</a></span></p>
+<br>
+<div class="form-group">
+	<label class="form-label" for="full-name">Address</label>
+	<textarea name="Text12" cols="40" rows="5" style="width:600px; height:150px;" id="Text12"></textarea>
+	<br>
+
+</div>
+<br>
+<br>
 
 
 
+	<div class="form-group">
+		<a class="button" href="report-check-answers.html">Continue</a>
 
-
-
-
-
-				<div class="form-group">
-					<a class="button" href="report-landlord-agent-address.html">Continue</a>
-
-				</div>
-			</form>
-
-		</div> <!-- column-two-thirds -->
+	</div>
+</form>
 
 <!-- STOP DELETING! -->
 
 
-</main>
-<footer data-includefile="footer"></footer>
+	</main>
+	<footer data-includefile="footer"></footer>
 </body>
 </html>

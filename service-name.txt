@@ -1,1 +1,1 @@
-Check and report the immigration status of tenants or occupiers
+End a tenancy agreement due to immigration status

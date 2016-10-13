@@ -42,8 +42,8 @@
 				<a href="applicant.html">< Back</a>
 
 
-			<h1 class="heading-medium">Can you provide more information on this tenant?</h1>
-			<p>The more information you can provide, the more likely we'll be able to identify the person.</p>
+			<h1 class="heading-medium">Can you provide more information on [tenant's name]?</h1>
+			<p>Please provide as much information as you can to help us identify [tenant's name]. Select all that apply.</p>
 			<form name="test-form">
 
 				<div class="form-group">
@@ -53,7 +53,7 @@
 					<!--Radio 1  -->
 					<label class="block-label" for="radio-1">
 						<input id="radio-1" type="checkbox" name="travel-how" value="one">
-						Tenant's date of birth
+						Date of birth
 					</label>
 					<div class="optional-section-travel-how form-group" data-toggle-value="one">
 						<!--  -->
@@ -73,6 +73,7 @@
 										<label for="dob-month">Month</label> <input class="form-control" id=
 										"dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month" />
 									</div>
+
 
 									<div class="form-group form-group-year">
 										<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
@@ -122,23 +123,32 @@
 					</details><!--hidden text  -->
 				</div>
 
-				<!--Radio 4  -->
 
-				<label class="block-label" for="radio-4">
-					<input id="radio-4" type="checkbox" name="travel-how" value="four">
-					I don't have any more information to give
-				</label>
+
+
+
 
 			</div>
+			<!--  -->
 
-				<!--  -->
+			<div>
+						<p>or</p>
+					</div>
 
+			<!--Radio 4  -->
 
+			<div><label class="block-label" for="radio-4">
+				<input id="radio-4" type="checkbox" name="travel-how" value="four">
+				I don't have any more information to give
+			</label>
+		</div>
 
+<br><br><br>
 
 				<!--CTA  -->
 				<div class="form-group">
-					<a class="button" href="check-landlord-agent.html">Continue</a>
+					<br>
+					<a class="button" href="check-tenant-details-another.html">Continue</a>
 
 				</div>
 

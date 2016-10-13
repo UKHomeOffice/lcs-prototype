@@ -16,7 +16,6 @@
 	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
-	<!-- <link href="stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" /> -->
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/form.storage.js"></script>
@@ -24,8 +23,6 @@
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 
@@ -33,72 +30,86 @@
 	<main id="content" role="main">
 		<div data-includefile="banner-alpha"></div>
 
+<!-- DELETE FROM HERE -->
+<!--LAYOUT  -->
+<div class="column-two-thirds">
 
-		<div class="column-two-thirds">
-
-			<!-- DELETE FROM HERE -->
-
-			<form name="test-form" class="form">
-				<br>
-				<a href="applicant.html">< Back</a>
-			<h1 class="heading-medium">What's the tenant's name and the date they left?</h1>
+<form name="test-form" class="form">
+	<br>
+	<a href="contact.html">< Back</a>
 
 
-			<!--Full name -->
+	<h1 class="heading-medium">Which address should we use to contact you?</h1>
 
-			<div class="form-group">
-				<label class="form-label" for="full-name">Full name as it's written on the NLDP</label>
+	<!--Home address  -->
+<p>You should only use the property address if you are the landlord and you live at this address.</p>
 
-				<input type="text" class="form-control" id="full-name5" name="full-name5" />
 
-			</div>
+		<!--name of company  -->
 
-			<!-- date tenant left -->
+		<!--  -->
+		<form>
+			<fieldset>
 
-			<p>If you don't know the exact date then please put the first date you knew they had left. </p>
 
-				<div class="form-group">
-					<fieldset>
-						<legend class="form-label"></legend>
 
-						<div class="form-date">
-							<p class="form-hint">For example, 31 3 2016</p>
+		<label class="block-label" for="radio-5">
+		<input id="radio-5" type="radio" name="radio-group" value="property-address">
+		Use the property address already provided
+		</label>
 
-							<div class="form-group form-group-day">
-								<label for="dob-day">Day</label> <input class="form-control" id="dob-day"
-								type="number" pattern="[0-9]*" min="0" max="31" name="dob-day" />
-							</div>
 
-							<div class="form-group form-group-month">
-								<label for="dob-month">Month</label> <input class="form-control" id=
-								"dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month" />
-							</div>
+		<!--  -->
+		<label class="block-label" for="radio-3">
+			<input id="radio-3" type="radio" name="radio-group" value="different-address">
+			Use a different address
+		</label>
+		<div class="optional-section-radio-group form-group" data-toggle-value="different-address">
+		<br>
+			<label class="form-label" for="vac-city2">
+				Postcode
+			</label>
+			<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
+			<br><br>
 
-							<div class="form-group form-group-year">
-								<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
-								type="number" pattern="[0-9]*" min="0" max="2014" name="dob-year" />
-							</div>
-						</div>
-					</fieldset>
-				</div>
+
+
+		</div>
+
+			</fieldset>
+		</form>
 
 <br>
 
-			<div class="form-group">
-				<a class="button" href="report-tenant-details.html">Continue</a>
 
-			</div>
-		</form>
+	<div class="form-group">
+		<a class="button" href="contact-address-select.html">Continue</a>
 
-
-			</form>
-
-		</div> <!-- column-two-thirds -->
-
+	</div>
+</form>
+</div>
 <!-- STOP DELETING! -->
 
 
-</main>
-<footer data-includefile="footer"></footer>
+	</main>
+	<footer data-includefile="footer"></footer>
+	<script type="text/javascript">
+		$(function () {
+			$('a').click(function (e) {
+				var value = $('input[name=radio-group]:checked').val();
+				// var value = $('input#input-text-id').val();
+				switch(value) {
+					case 'property-address':
+						this.href = 'check-check-answers.html';
+						break;
+
+					default:
+						this.href = 'check-landlord-address-select.html';
+						break;
+				}
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

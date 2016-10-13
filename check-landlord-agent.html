@@ -16,7 +16,6 @@
 	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
-	<!-- <link href="stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" /> -->
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/form.storage.js"></script>
@@ -24,8 +23,6 @@
 	<script type="text/javascript" src="scripts/details.polyfill.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 </head>
 <body>
 
@@ -33,86 +30,100 @@
 	<main id="content" role="main">
 		<div data-includefile="banner-alpha"></div>
 
+<!-- DELETE FROM HERE -->
+<!--LAYOUT  -->
+<div class="column-two-thirds">
 
-		<div class="column-two-thirds">
-
-			<!-- START PAGE -->
-			<form name="test-form" class="form">
-				<br>
-				<a href="applicant.html">< Back</a>
+<form name="test-form" class="form">
+	<br>
+	<a href="contact.html">< Back</a>
 
 
-			<h1 class="heading-medium">Who are you?</h1>
-
-			<form name="test-form">
-
-				<div class="form-group">
+	<h1 class="heading-medium">Who are you?</h1>
 
 
 
-					<!--Radio 1  -->
-					<label class="block-label" for="radio-1">
-						<input id="radio-1" type="checkbox" name="travel-how" value="one">
-						Landlord
-					</label>
-					<div class="optional-section-travel-how form-group" data-toggle-value="one">
-						<!--  -->
-						<br>
-						<label class="form-label" for="vac-city2">
-							Full name
-						</label>
-						<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
-
-						<!--  -->
-					</div>
-
-					<!--Radio 2  -->
-					<label class="block-label" for="radio-2">
-						<input id="radio-2" type="checkbox" name="travel-how" value="two">
-						Agent acting on behalf of the landlord
-					</label>
-					<div class="optional-section-travel-how form-group" data-toggle-value="two">
-						<br>
-						<label class="form-label" for="vac-city2">
-							Company's full name
-						</label>
-						<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
-						<br><br>
-						<label class="form-label" for="vac-city2">
-
-							Landlord's full name
-						</label>
-						<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
+		<!--  -->
+		<form>
+			<fieldset>
 
 
 
-				</div>
+		<label class="block-label" for="radio-5">
+		<input id="radio-5" type="radio" name="radio-group" value="landlord">
+		Landlord
+		</label>
+		<div class="optional-section-radio-group form-group" data-toggle-value="landlord">
+		<br>
+			<label class="form-label" for="vac-city2">
+				Your full name
+			</label>
+			<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
+			<br><br>
+		</div>
 
 
-
-				<!--  -->
+		<!--  -->
+		<label class="block-label" for="radio-3">
+			<input id="radio-3" type="radio" name="radio-group" value="agent">
+			Agent acting on behalf of a landlord
+		</label>
+		<div class="optional-section-radio-group form-group" data-toggle-value="agent">
+		<br>
+			<label class="form-label" for="vac-city2">
+				Your full name
+			</label>
+			<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
+			<br><br>
+			<label class="form-label" for="vac-city2">
+			Your company's name
+		</label>
+		<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
+		<br><br>
+		<label class="form-label" for="vac-city2">
+		Landlord's full name
+	</label>
+	<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
 
 
 
 
-				<!--CTA  -->
+		</div>
 
-				<div class="form-group">
-					<br>
-					<a class="button" href="check-landlord-agent-details.html">Continue</a>
+			</fieldset>
+		</form>
 
-				</div>
-
+<br>
 
 
+	<div class="form-group">
+		<a class="button" href="#">Continue</a>
+
+	</div>
 </form>
-			</div> <!-- column-two-thirds -->
+</div>
+<!-- STOP DELETING! -->
 
-			<!-- STOP DELETING! -->
 
+	</main>
+	<footer data-includefile="footer"></footer>
+	<script type="text/javascript">
+		$(function () {
+			$('a').click(function (e) {
+				var value = $('input[name=radio-group]:checked').val();
+				// var value = $('input#input-text-id').val();
+				switch(value) {
+					case 'landlord':
+						this.href = 'check-landlord-details.html';
+						break;
 
-		</main>
-		<footer data-includefile="footer"></footer>
-
-	</body>
-	</html>
+					default:
+						this.href = 'check-agent-details.html';
+						break;
+				}
+				return true;
+			});
+		});
+	</script>
+</body>
+</html>
