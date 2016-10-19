@@ -40,33 +40,60 @@
 			<br>
 
 			<h1 class="heading-medium">What do you want to do?</h1>
+<!--test  -->
+<form name="test-form">
 
-			<form name="test-form">
+	<div class="form-group">
+		<!--12 -->
 
-				<div class="form-group">
-					<label class="block-label" for="radio-1">
-						<input id="radio-1" type="radio" name="radio-group" value="tenant-left">
-						Report that tenants or occupiers have left your property following a Notice of Letting to a Disqualified Person
+		<label class="block-label selectable" for="radio-1">
+			<input class="selectable" id="radio-1" type="radio" name="travel-how" value="one">
+			Report that a disqualified person has left your property
+		</label>
+		<div class="optional-section-travel-how form-group" data-toggle-value="one">
 
-					</label>
+			<p>Tell the Home Office that a person has left your property following a Notice of Letting to a Disqualified Person. This means that Home Office can update their records and you have no further actions. </p>
 
-					<label class="block-label" for="radio-2">
-						<input id="radio-2" type="radio" name="radio-group" value="nldp">
-						Request a Notice of Letting to a Disqualified Person so that you can give tenants or occupiers notice to leave your property due to their immigration status
-					</label>
+		</div>
+
+		<!--2  -->
+		<label class="block-label selectable" for="radio-2">
+			<input id="radio-2" type="radio" name="travel-how" value="two">
+			Take action if you think a person is not allowed to rent
+		</label>
+		<div class="optional-section-travel-how form-group" data-toggle-value="two">
+
+<p>If you believe that a person is not allowed to rent due to their immigration status you can request a Notice of Letting to a Disqualified Person from the Home Office to confirm this. You can then use this to help you end the tenancy agreement.</p>
+		</div>
+		<!--3  -->
+		<label class="block-label selectable" for="radio-3">
+			<input id="radio-3" type="radio" name="travel-how" value="three">
+			Check if a person living in your property is still disqualified from renting
+		</label>
+		<div class="optional-section-travel-how form-group" data-toggle-value="three">
+
+			<p>If you have received a Notice of Letting to a Disqualified Person to confirm that someone living in your property is not allowed to rent due to their immigration status, you can check that this is still valid. You may wish to do this if some time has passed since it was issued and you are using it to end a tenancy. </p>
+		</div>
+		<!--4  -->
+		<label class="block-label selectable" for="radio-4">
+			<input class="selectable" id="radio-4" type="radio" name="travel-how" value="four">
+			Tell the Home Office that a tenant has failed the follow-up right to rent check
+		</label>
+		<div class="optional-section-travel-how form-group" data-toggle-value="four">
+
+			<p>If a tenant has failed the follow-up right to rent check you need to make a report to the Home Office. The Home Office will send you a Notice of Letting to a Disqualified Person to help you end the tenancy agreement.</p>
+		</div>
 
 
-				<label class="block-label" for="radio-3">
-					<input id="radio-3" type="radio" name="radio-group" value="check-tenant">
-					Check if a Notice of Letting to a Disqualified Person is still valid
 
-				</label>
-			</div>
+	</div>
+</form>
+<!-- end new -->
+			<!--end tst  -->
 
-		</form>
 
 		<br>
-		<a href="#"><input class="button" type="submit" value="Continue"></a>
+		<a id="button" href="#"><input class="button" type="submit" value="Continue"></a>
 
 	</div> <!-- column-two-thirds -->
 
@@ -78,17 +105,19 @@
 <footer data-includefile="footer"></footer>
 <script type="text/javascript">
 $(function () {
-	$('a').click(function (e) {
-		var value = $('input[name=radio-group]:checked').val();
-		// var value = $('input#input-text-id').val();
+	$('a#button').click(function (e) {
+		var value = $('input[name=travel-how]:checked').val();
 		switch(value) {
-			case 'tenant-left':
+			case 'one':
 			this.href = 'report-nldp-date.html';
 			break;
-			case 'check-tenant':
+			case 'two':
 			this.href = 'check-nldp-date.html';
 			break;
-			default:
+			case 'three':
+			this.href = 'request-property-address.html';
+			break;
+			case 'four':
 			this.href = 'request-property-address.html';
 			break;
 		}
